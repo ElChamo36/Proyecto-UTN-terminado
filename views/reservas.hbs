@@ -1,0 +1,61 @@
+
+{{>headeradmin}}
+
+<body>
+    <h1>Reservas Cabaña Suiza</h1>
+    <div class="reservas">
+        <table>
+            <thead>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>DNI</th>
+                <th>Mail</th>
+                <th>Teléfono</th>
+                <th>Fecha de Ingreso</th>
+                <th>Fecha de Egreso</th>
+                <th>Seña</th>
+                <th>Monto Total</th>
+                <th>Total noches</th>               
+            </thead>
+
+            <tbody>
+                {{#each reserva}}
+                <tr>
+                <td>{{nombre_reserva}}</td>
+                <td>{{apellido_reserva}}</td>
+                <td>{{dni_reserva}}</td>
+                <td>{{mail_reserva}}</td>
+                <td>{{telefono_reserva}}</td>
+                <td>{{fecha_ingreso_reserva}}</td>
+                <td>{{fecha_egreso_reserva}}</td>
+                <td>{{seña}}</td>
+                <td>{{monto}}</td>
+                <td>{{total_noches}}</td>               
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+
+
+
+
+
+<script>
+function login(req, res){
+    let usuario = "administrador";
+    let password = 1234;
+    let askUsuario = prompt("Escribe tu nombre de usuario");
+    let askPassword = parseInt(prompt("Escribe tu contraseña"));
+    if (usuario == askUsuario && password == askPassword){
+        alert("Bienvenido administrador!!!!")
+    }else{
+    alert("Tu usuario y/o contraseña son incorrectos");
+    location.href='error'
+    }
+}   
+login()
+
+</script>

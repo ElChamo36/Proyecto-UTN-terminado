@@ -1,0 +1,718 @@
+/* Body-----------------------------*/
+body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: 'Special Elite', cursive;
+}
+
+/* Header-----------------------------*/
+header{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2.5%;
+    padding-bottom: 1%;
+    animation-name: headerentrada;
+    animation-duration: .8s;
+    
+}
+
+header a{
+    max-width: 25%;
+}
+
+header img{
+    max-width: 100%;
+    max-height: fit-content;
+    margin-left: 10%; 
+}
+
+header .nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items:center;
+    width:65%;
+    
+}
+
+header .nav .divanclasheader{
+    display: flex;
+    width: 75%;
+    align-self: start;
+
+}
+
+header .nav a{
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid gold;
+    border-right: 1px solid gold;
+    padding: 1%;
+    transition: .15s;
+    margin-right: 4%;
+    font-size: 2em;
+}
+
+header .nav a:hover{
+    background-color: rgb(24, 23, 23);
+    box-shadow: 0px 2px 3px 0 gold;
+    border-radius: 0px;
+    border-top: 2px solid gold;    
+    border-bottom: none;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    transform: scale(1.3);
+}
+
+header nav h1{
+    font-size: 3.5em;
+    justify-self: flex-end;
+    display: block;
+    padding-top: 2px;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 13ch;
+
+    animation: typing 2s  steps(12), blink .5s infinite step-end alternate, subrayado 5s infinite ease-in-out;
+    overflow: hidden;
+}
+
+@keyframes typing{
+    from {
+        width:0
+    }
+}
+@keyframes blink {
+    50% {border-color: transparent}
+}
+@keyframes subrayado{
+    50% {
+        border-bottom: 2px solid rgb(255, 251, 0);
+        box-shadow: 2px 5px 7px 0 rgb(255, 251, 0);
+    }
+}
+
+@keyframes headerentrada{
+    from{
+        transform: translateY(-150px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+.divheaderadmin{
+    width: 100vw;
+    margin-bottom: 3%;
+}
+
+
+/* Footer-----------------------------*/
+
+footer{
+    background-color: rgb(39, 38, 37);
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+footer .divfooteranclas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    color: white;
+    text-align: center;
+}
+
+.divfooteranclas div{
+    display: flex;
+    flex-direction: column;  
+}
+
+.divfooteranclas div a img{   
+    width: 18%;
+}
+
+.img1{
+    margin-bottom: 15%;
+}
+
+.img2{
+    margin-bottom: 15%;
+}
+
+.divfooteranclas a img:hover{
+    transform: scale(1.5);
+}
+
+
+footer .divfooterp{
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.divfooterp .mediospago{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+
+.divfooterp .mediospago img {
+    max-width: 12%;
+}
+
+.divfooteriframe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-right: 7%;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 2em;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    padding: 1.5% 2% 1.5% 2%;
+    border-radius: 5px;
+}
+
+.h3footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 1%;
+    margin-top: 0px;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+}
+
+
+/* Index-------------------------------------*/
+.divindex{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(154, 253, 179);
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.divservicios{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 15%;
+    background-color: seagreen;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding-top: 1%;
+}
+
+.divservicios img{
+    width: 38%;
+}
+.divservicios img:hover{
+    filter: contrast(1.7) drop-shadow(5px 5px 5px rgb(1, 39, 9 ));
+}
+
+.divservicios h3{
+    font-size: 1.5em;
+}
+
+.divsection {
+    width: 70%;
+    margin-right: 5%;
+}
+
+.divsection section{
+    width: 100%;
+    font-size: 2em;
+    letter-spacing: 2px;
+    
+}
+
+.divsection img{
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 1%;
+    transition: .3s;
+}
+
+.divsection img:hover{
+    filter: contrast(1.5);
+    width: 65%;
+    box-shadow: 5px 10px 5px 0 black;
+}
+
+.divsection .img1{
+    float: right;
+}
+.divsection .img2{
+    float: left;
+}
+
+.divsection section video{
+    width: 48%;
+    border: 4px solid black;
+    border-radius: 10px;
+}
+
+.divsection section .video1{
+    float: left;
+}
+
+.divsection section .video2{
+    float: right;
+    margin-top: 3%;
+}
+.divsection section a{
+    text-align: center;
+    margin-bottom: 2%;
+    border: 2px solid black; 
+    text-decoration: none; 
+    color: black; 
+    padding: 1%; 
+    background-color: rgb(255, 145, 0);
+    margin-left: 18%;
+}
+
+/* Formulario-----------------------------*/
+
+.divformulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(174, 245, 204);
+    
+}
+
+.divformulario form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(19, 18, 18));
+    border-radius: 15px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.divformulario form::placeholder{
+    color: white;
+}
+
+.divformulario form input{
+    background-color: rgb(51, 47, 47);
+    color: white;
+    width: 60%;
+    padding: .9%;
+    border-bottom: 2px solid rgb(251, 255, 29);
+    border-right: 2px solid rgb(251, 255, 29);
+}
+
+.divformulario form input::placeholder{
+    color: white;
+    text-align: center;
+}
+
+.divformulario form label{
+    align-self: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 1%;
+    color: rgb(255, 255, 255);
+    
+}
+
+.divformulario form .submit{
+    margin: 1.7%;
+    background-color: gold;
+    border: 3.5px solid black;
+    color:rgb(0, 0, 0);
+    font-weight: bolder;
+    font-size: 1.2em
+}
+
+/* Galería-----------------------------*/
+
+.divmaingaleria {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: repeat (13, auto);
+    grid-gap: .8%; 
+    padding: 2% 2%;
+    margin-bottom: 5%;
+    background-image: linear-gradient(rgb(44, 139, 44), rgb(110, 214, 110), white);
+}
+
+.divmaingaleria img{
+    width:85%;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition-duration: .3s;
+}
+
+.divmaingaleria img:hover{
+    width:100%;
+    filter: contrast(1.3);
+    box-shadow: -10px 10px 15px  black;
+}
+
+
+/*Turismo--------------------------------------------------------*/
+
+.divTurismo{
+    background-image: url(../fotos/csp3.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 7%;
+}
+
+.divTurismo h1{
+    font-size: 3em;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.divTurismo div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.listadesp{
+    display: flex;
+    flex-direction: column;
+    margin: 3% auto 3% auto;
+    font-size: 1.1em;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    width: 35%;
+}
+
+.listadesp a{
+    text-decoration: none;
+    margin-top: 1%;
+    font-size: 1.5em;
+    background-color: rgb(4, 63, 9);
+    color: white;
+    border-radius: 10px;
+    padding: 2%;
+    transition-duration: .2seg;
+}
+
+.listadesp a:hover{
+    transform: scalex(1.1);
+    border-bottom: 2px solid black;
+    box-shadow: 0px 2px 5px 0 black;
+    filter: contrast(1.5);
+}
+
+.listadesp h2{
+    font-size: 2em;
+    font-style: oblique;
+    font-weight: bolder;
+    background-color: black;
+    color: white;
+    padding: 3%;
+}
+
+
+
+/*Administrador--------------------------------------------------------*/
+
+.administrador{
+    padding: 2%;
+    background-color: white;
+    border: 2px solid rgb(53, 52, 52);
+    
+}
+.administrador .consultas table{
+    align-self: center;
+    text-align: start;
+    margin-bottom: 2%;
+    
+}
+
+.administrador .consultas table thead th{
+    padding: 1% 1% 1% 1%;
+    width: 10%;
+    border: 2px solid black;
+}
+
+.administrador .consultas table tbody td{
+    padding: 1% 1% 1% 1%;
+    width: 10%;
+    overflow: auto;
+    border: 2px solid black;
+}
+
+.administrador .consultas .divreserva form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.administrador .consultas .divreserva form input{
+    
+}
+
+.administrador .consultas label{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 1%;
+}
+
+/*Reservas--------------------------------------------------*/
+
+ .reservas table thead th{
+    padding: 1% 1% 1% 1%;
+    width: 10%;
+    border: 2px solid black;
+}
+
+ .reservas table tbody td{
+    padding: 1% 1% 1% 1%;
+    width: 10%;
+    overflow: auto;
+    border: 2px solid black;
+}
+
+
+
+/*Error--------------------------------------------------------*/
+
+.bodyErr{
+    background-image: url(../fotos/error.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bodyErr h1{
+    font-size: 35px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 3% auto;
+    margin: 1% auto;
+    text-align: center;
+    padding: 5px;
+}
+
+.bodyErr h2{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 3% auto;
+    margin: 3% auto;
+    text-align: center;
+    padding: 5px;
+}
+
+.bodyErr a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+    background-color: rgb(168, 5, 5);
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    margin-top: 10%;
+    border-radius: 30px;
+}
+
+
+/*Querys--------------------------------------------------------*/
+
+@media screen and (max-width: 1200px){
+    header{
+        flex-direction:  column;
+        align-items: center;
+    }
+
+    header img{
+        margin-left: 0%; 
+    }
+
+    header .nav .divanclasheader{
+    align-self: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.divfooteranclas div a img{   
+    width: 20%;
+}
+}
+
+@media screen and (max-width: 860px){
+    header a{
+        max-width: 40%;
+    }
+    
+    header .nav .divanclasheader{
+        font-size: .8;
+        flex-wrap: wrap;
+    }
+
+    header .nav a{
+        margin-top: 1%;
+        margin-right: 5%;
+    }
+
+    .divsection section{
+        width: 100%;
+        font-size: 1.5em;
+        letter-spacing: 1.5px;
+        
+    }
+
+    .divservicios img{
+        width: 45%;
+    }
+    
+    .divservicios h3{
+        font-size: 1.1em;
+    }
+
+    .divmaingaleria{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .divmaingaleria img{
+        width: 75%;
+        margin-bottom: 2%;
+    }
+
+    .divmaingaleria img:hover{
+        width:90%
+    }
+
+    .divfooteranclas div a img{   
+        width: 25%;
+    }
+}
+
+.divheaderadmin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 750px){
+    header .nav .divanclasheader{
+        flex-direction: column;
+        align-items: center;
+        font-size: .8em;
+    }
+
+    header .nav a{
+        width: max-content;
+
+    }
+
+    header nav h1{
+        font-size: 3em;
+        justify-self: flex-end;
+        align-self: center;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .divfooteranclas{
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        
+    }
+
+    .divfooteranclas div a img{   
+        width: 30%;
+    }
+
+    footer .divfooteranclas div{
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+    }
+
+    .divfooteriframe {
+        margin-right: 0%;      
+    }
+
+    .divsection {
+        margin-right: 0%;
+    }
+
+    .divsection section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5em;
+        letter-spacing: 1.5px;
+        
+    }
+
+    .divsection section a{
+        
+        margin-left: 0%;
+    }
+
+    .divservicios img{
+        width: 65%;
+    }
+    
+    .divservicios h3{
+        font-size: 1.1em;
+    }
+
+    .divformulario form{
+        
+        width: 90%;
+        
+    }
+
+    .divmaingaleria img{
+        width:85%;  
+    }
+
+    .divTurismo div{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .listadesp{
+        
+        width: 75%;
+        margin-right: 12%;
+        
+    }
+
+}

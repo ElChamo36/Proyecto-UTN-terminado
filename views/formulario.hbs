@@ -1,0 +1,27 @@
+{{>header}}
+
+<div class="divformulario">
+    <form action="/formulario" method="post">
+        <label for="" >Nombre</label>
+        <input required type="text" name="nombre"  placeholder="Escribe tu nombre">
+        <label for="">Apellido</label>
+        <input required type="text" name="apellido" placeholder="Escribe tu apellido">
+        <label for="">Decinos que buscás</label>
+        <input type="text"  placeholder="Contanos... ¿Qué buscás?">
+        <label required for="" >Número de pasajeros</label>
+	    <input type="number" name="numpasajeros" min="1" placeholder="Pasajeros">
+        <label for="">Fecha de ingreso</label>
+	    <input required type="date" name="fecha_ingreso_consulta" placeholder="Check in">
+        <label for="">Fecha de egreso</label>
+        <input required type="date" name="fecha_egreso_consulta" placeholder="Check out" >
+        <label for="">DNI</label>
+	    <input type="num" name="dni" placeholder="Escribe tú dni">
+        <label for="">Dejanos tu Mail</label>
+	    <input required type="email" name="mail" placeholder="Escribe tú mail"> 
+        <label for="">Dejanos tu teléfono</label>
+	    <input required type="tel" name="telefono" placeholder="Escribe tú teléfono">     
+	    <input class="submit" type="submit" placeholder="Send">		
+    </form>  	
+</div>
+
+{{>footer}}

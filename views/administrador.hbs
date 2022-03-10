@@ -1,0 +1,83 @@
+{{>headeradmin}}
+
+
+<body>
+    <div class="administrador">
+    <section class="consultas">
+        <h1>Consultas</h1>
+        <table>
+            <thead>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Fecha de Ingreso</th>
+                <th>Fecha de Egreso</th>
+                <th>DNI</th>
+                <th>Mail</th>
+                <th>Teléfono</th>
+            </thead>
+
+            <tbody>
+                {{#each result}}
+                <tr>
+                <td>{{nombre}}</td>
+                <td>{{apellido}}</td>
+                <td>{{fecha_ingreso_consulta}}</td>
+                <td>{{fecha_egreso_consulta}}</td>
+                <td>{{dni}}</td>
+                <td>{{mail}}</td>
+                <td>{{telefono}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </section>
+<br>
+    <section class="consultas">
+        <h1 style="text-align: center;">Armá tu reserva y enviala al cliente</h1>
+        <div class="divreserva">
+            <form action="" method="post">
+                <label for="">Nombre</label>
+                <input type="text" name="nombre_reserva" placeholder="">
+                <label for="">Apellido</label>
+                <input type="text" name="apellido_reserva" placeholder="">
+                <label for="">DNI</label>
+                <input type="number" name="dni_reserva" placeholder="">
+                <label for="">Mail</label>
+                <input type="text" name="mail_reserva" placeholder="">
+                <label for="">Telefono</label>
+                <input type="telefono" name="telefono_reserva" placeholder="">
+                <label for="">N° de pasajeros</label>
+                <input type="number" name="numero_reserva" placeholder="">
+                <label for="">Fecha de ingreso</label>
+                <input type="date" name="fecha_ingreso_reserva" placeholder="">
+                <label for="">Fecha de egreso</label>
+                <input type="date" name="fecha_egreso_reserva" placeholder="">
+                <label for="">Seña</label>
+                <input type="number" name="seña" placeholder="">
+                <label for="">Monto total</label>
+                <input type="number" name="monto" placeholder="">
+                <label for="">Total de noches</label>
+                <input type="number" name="total_noches" placeholder="">
+                <br><br>
+                <input type="submit">
+            </form>
+        </div>                    
+    </section>
+</div>
+
+<script>
+function login(req, res){
+    let usuario = "administrador";
+    let password = 1234;
+    let askUsuario = prompt("Escribe tu nombre de usuario");
+    let askPassword = parseInt(prompt("Escribe tu contraseña"));
+    if (usuario == askUsuario && password == askPassword){
+        alert("Bienvenido administrador!!!!")
+    }else{
+    alert("Tu usuario y/o contraseña son incorrectos");
+    location.href='error'
+    }
+}   
+login()
+</script>
+</body>
