@@ -1,7 +1,7 @@
 // require ('dotenv').config();
 const express = require('express');
 const app = express();
-const Port = process.env.Port;
+const Port = process.env.PORT;
 const path = require('path');
 const hbs = require('hbs');
 
@@ -171,7 +171,7 @@ app.post('/formulario', (req, res) => {
 
 
 //Configuración del servidor
-app.listen(Port, () =>{
+app.listen(process.env.Port, () =>{
     console.log(`Servidor está trabajando en el Puerto ${Port}`);
 });
 
