@@ -98,18 +98,6 @@ app.get('/reservas', (req, res) => {
 nombre de la variable que estoy describiendo en las constantes.
 El method del formulario tiene que ser post*/ 
 
-// let data = {
-//     nombre: nombre,
-//     apellido: apellido,
-//     fecha_ingreso_consulta: fecha_ingreso_consulta,
-//     fecha_egreso_consulta: fecha_egreso_consulta,
-//     dni: dni,
-//     mail: mail,
-//     telefono: telefono
-//      }
-
-// let sql = "Insert into cliente set ?";
-
 //Ruta post para usuarios
 app.post('/formulario', (req, res) => {
     const {nombre, apellido, fecha_ingreso_consulta, fecha_egreso_consulta, dni, mail, telefono} = req.body;
