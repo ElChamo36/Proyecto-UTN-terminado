@@ -1,4 +1,4 @@
-// require ('dotenv').config();
+require ('dotenv').config();
 const express = require('express');
 const app = express();
 const Port = process.env.PORT;
@@ -12,10 +12,10 @@ const mysql = require('mysql2');
 
 //Creamos la configuración de la conexión con la base de datos
 const conexion = mysql.createConnection({
-    host: "us-cdbr-east-05.cleardb.net",
-    user: "bdac8c28805569",
-    password: "fbc638a8",
-    database: "heroku_278d0b591ffdbe8",
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.PASS,
+    database: process.env.DB,
     port: 3306
 });
 
