@@ -155,7 +155,7 @@ app.post('/formulario', (req, res) => {
 
 
 //Cierre de la conexión
-// conexion.end();
+conexion.end();
 
 
 //Configuración del servidor
