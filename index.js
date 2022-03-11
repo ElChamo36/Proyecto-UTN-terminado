@@ -10,15 +10,15 @@ const hbs = require('hbs');
 const mysql = require('mysql2');
 
 
-//Creamos la configuración de la conexión con la base de datos
-// const conexion = mysql.createConnection({
-//     host: "ec2-18-235-45-217.compute-1.amazonaws.com",
-//     user: "onawltghzinmga",
-//     password: "302ce9c827896b5789bdcf35fbfe7e1c3133fb864b9df75ceb4993111fe8ca26",
-//     database: "d9vo0k6bf6radr",
-//     port: 5432
-//     //También se puede poner port: "3306"
-// });
+Creamos la configuración de la conexión con la base de datos
+const conexion = mysql.createConnection({
+    host: "us-cdbr-east-05.cleardb.net",
+    user: "bdac8c28805569",
+    password: "fbc638a8",
+    database: "heroku_278d0b591ffdbe8",
+    port: 3306
+    //También se puede poner port: "3306"
+});
 
 
 //Conectamos a la database
