@@ -17,7 +17,6 @@ const conexion = mysql.createConnection({
     password: "fbc638a8",
     database: "heroku_278d0b591ffdbe8",
     port: 3306
-    //También se puede poner port: "3306"
 });
 
 
