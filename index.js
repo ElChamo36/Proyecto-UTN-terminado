@@ -12,22 +12,23 @@ const mysql = require('mysql2');
 
 //Creamos la configuración de la conexión con la base de datos
 // const conexion = mysql.createConnection({
-//     host: "localhost",
-//     user: "root",
-//     password: "Elite1333",
-//     database: "cabaña"
+//     host: "ec2-18-235-45-217.compute-1.amazonaws.com",
+//     user: "onawltghzinmga",
+//     password: "302ce9c827896b5789bdcf35fbfe7e1c3133fb864b9df75ceb4993111fe8ca26",
+//     database: "d9vo0k6bf6radr",
+//     port: 5432
 //     //También se puede poner port: "3306"
 // });
 
 
 //Conectamos a la database
-// conexion.connect((error) => {
-//     if (error){
-//         console.log("error")
-//     }else{
-//         console.log("Tu conexion con base de datos fue exitosa")
-//     }
-// });
+conexion.connect((error) => {
+    if (error){
+        console.log("error")
+    }else{
+        console.log("Tu conexion con base de datos fue exitosa")
+    }
+});
 
 
 
