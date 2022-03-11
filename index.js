@@ -10,7 +10,7 @@ const hbs = require('hbs');
 const mysql = require('mysql2');
 
 
-Creamos la configuración de la conexión con la base de datos
+//Creamos la configuración de la conexión con la base de datos
 const conexion = mysql.createConnection({
     host: "us-cdbr-east-05.cleardb.net",
     user: "bdac8c28805569",
