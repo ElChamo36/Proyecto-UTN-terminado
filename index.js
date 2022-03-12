@@ -153,7 +153,7 @@ app.post('/formulario', (req, res) => {
         });
 
 //Ruta PUT para que el administrador realice un UPDATE  
-    app.put('/update', (req, res) => {
+    app.post('/reservas', (req, res) => {
         const {fecha_ingreso_reserva, fecha_egreso_reserva, id_reserva} = req.body;
         conexion.query("UPDATE reservas SET fecha_ingreso_reserva= ?, fecha_egreso_reserva= ?  WHERE id_reserva = ?", [fecha_ingreso_reserva, fecha_egreso_reserva, id_reserva], (err, result) =>{
             if (err){
@@ -166,7 +166,7 @@ app.post('/formulario', (req, res) => {
     });
 
 //Ruta DELETE para que el administrador realice un DELETE
-    app.delete('/delete', (req, res) =>{
+    app.delete('/reservas', (req, res) =>{
         const {id_reserva} = req.body;
         conexion.query("DELETE FROM reservas where id_reserva = ?;", id_reserva, (err, result) =>{
             if(err){

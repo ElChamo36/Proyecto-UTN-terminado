@@ -490,11 +490,12 @@ footer h2 {
     padding-right: 2%;
 }
 
-.reservasbody h1{
+.reservasbody .h1reserva{
     padding: 1.5%;
     background-color: rgb(65, 2, 2);
     color: white;
     border-radius: 10px;
+    text-align: center;
 }
 
 .modifdelete{
