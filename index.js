@@ -124,7 +124,7 @@ app.post('/formulario', (req, res) => {
                         to: mail,
                         subject: "Nuevo mensaje de contacto",
                         html:`Gracias por visitar nuestra página de CABAÑA SUIZA!!!   
-                            En instantes te respondemos tu consulta.`
+                            En instantes te respondemos tu consulta ${nombre} ${apellido}.`
                     });
                 console.log("Tu consulta se realizó con éxito")
                 res.render ('enviado', {título: "Mail enviado a CABAÑA SUIZA, desde: ",
