@@ -152,30 +152,25 @@ app.post('/formulario', (req, res) => {
         
         });
 
-//Ruta PUT para que el administrador realice un UPDATE  
-    app.post('/reservas', (req, res) => {
-        const {fecha_ingreso_reserva, fecha_egreso_reserva, id_reserva} = req.body;
-        conexion.query("UPDATE reservas SET fecha_ingreso_reserva= ?, fecha_egreso_reserva= ?  WHERE id_reserva = ?", [fecha_ingreso_reserva, fecha_egreso_reserva, id_reserva], (err, result) =>{
-            if (err){
-                console.log(err);
-            }else{
-                res.send("Actualización exitosa")
-                console.log(id_reserva + fecha_ingreso_reserva + fecha_egreso_reserva);
-            }
-        })
-    });
+//Ruta PUT y DELETE para que el administrador realice un UPDATE y DELETE  
+app.post('/reservas', (req, res) => {
+    const {fecha_ingreso_reserva, fecha_egreso_reserva, id_reserva} = req.body;
+    conexion.query("UPDATE reservas SET fecha_ingreso_reserva= ?, fecha_egreso_reserva= ?  WHERE id_reserva = ?", [fecha_ingreso_reserva, fecha_egreso_reserva, id_reserva], (err, result) =>{
+        if (fecha_ingreso_reserva == undefined && fecha_egreso_reserva == undefined){
+            conexion.query("DELETE FROM reservas where id_reserva = ?;", id_reserva, (err, result) =>{
+                if(err){
+                    console.log(err);
+                }else{
+                    res.send("Reserva borrada con éxito");
+                }
+            })
+        }else{
+            res.send("Actualización exitosa")
+            console.log(id_reserva + fecha_ingreso_reserva + fecha_egreso_reserva);
+        }
+    })
+});
 
-//Ruta DELETE para que el administrador realice un DELETE
-    app.delete('/reservas', (req, res) =>{
-        const {id_reserva} = req.body;
-        conexion.query("DELETE FROM reservas where id_reserva = ?;", id_reserva, (err, result) =>{
-            if(err){
-                console.log(err);
-            }else{
-                res.send("Reserva borrada con éxito");
-            }
-        })
-    });
 
 
 //Cierre de la conexión
