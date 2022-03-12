@@ -485,21 +485,62 @@ footer h2 {
 }
 
 /*Reservas--------------------------------------------------*/
-.reservas1{
-    background-image: radial-gradient(gold, rgba(0, 174, 255, 0.747));
-}
-.reservas table thead th{
-    padding: 1% 1% 1% 1%;
-    width: 10%;
-    border: 2px solid black;
+.reservasbody{
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
-.reservas table tbody td{
-    padding: 1% 1% 1% 1%;
-    width: 10%;
+.reservasbody h1{
+    padding: 1.5%;
+    background-color: rgb(65, 2, 2);
+    color: white;
+    border-radius: 10px;
+}
+
+.modifdelete{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.divModificar{
+    border: 2px solid black;
+    background-color:rgb(174, 245, 204);
+    padding: 2%;
+    width: 65%;
+    margin-bottom: 2%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.divEliminar{
+    border: 2px solid black;
+    background-color:rgb(82, 221, 140);
+    padding: 2%;
+    width: 65%;
+    margin-bottom: 2%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+ .reservas table thead th{
+    padding: 1% 0% 1% 0%;
+    width: fit-content;
+    border: 2px solid black;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+ .reservas table tbody td{
+    padding: 1% .1% 1% .1%;
+    width: 8%;
     overflow: auto;
     border: 2px solid black;
+    margin-left: 2%;
+    margin-right: 2%;
 }
+
+
 
 
 

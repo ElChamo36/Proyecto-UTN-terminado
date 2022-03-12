@@ -1,26 +1,51 @@
 
 {{>headeradmin}}
 
-<body class="reservas1">
+<body class="reservasbody">
     <h1>Reservas Cabaña Suiza</h1>
     <div class="reservas">
         <table>
             <thead>
+                <th>N°Reserva</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>DNI</th>
                 <th>Mail</th>
                 <th>Teléfono</th>
-                <th>Fecha de Ingreso</th>
-                <th>Fecha de Egreso</th>
+                <th>Ingreso</th>
+                <th>Egreso</th>
                 <th>Seña</th>
-                <th>Monto Total</th>
-                <th>Total noches</th>               
+                <th>Monto</th>
+                <th>Noches</th>               
             </thead>
 
             <tbody>
+                <div class="modifdelete">
+                <div class="divModificar">
+                <h2>Modificar Reservas</h2>
+                <form action="/reservas" method="post">
+                    <h3>Número de reserva</h3><input name="id_reserva" type="number" >
+                    <h3>Fecha de ingreso</h3><input name="fecha_ingreso_reserva"  type="date" >
+                    <h3>Fecha de egreso</h3><input name="fecha_egreso_reserva" type="date" >
+                    <br><br>
+                    <input type="submit" placeholder="Modificar" style="background-color: forestgreen;">
+                </form>
+                </div>
+
+                <div class="divEliminar">
+                <h2>Eliminar Reservas</h2>
+                <form action="/reservas" method="post">
+                    <h3>Número de reserva</h3><input name="id_reserva" type="number" >
+                    <br><br>
+                    <input type="submit" placeholder="Eliminar" style="background-color: rgb(255, 0, 0);">
+                </form>
+                </div>
+                </div>
+                
+                
                 {{#each reserva}}
                 <tr>
+                <td>{{id_reserva}}</td>
                 <td>{{nombre_reserva}}</td>
                 <td>{{apellido_reserva}}</td>
                 <td>{{dni_reserva}}</td>
@@ -30,7 +55,7 @@
                 <td>{{fecha_egreso_reserva}}</td>
                 <td>{{seña}}</td>
                 <td>{{monto}}</td>
-                <td>{{total_noches}}</td>               
+                <td>{{total_noches}}</td>        
                 </tr>
                 {{/each}}
             </tbody>
@@ -57,5 +82,12 @@ function login(req, res){
     }
 }   
 login()
+
+let botonModificar = document.getElementById("modificar");
+let botonEliminar = document.getElementById("eliminar");
+
+botonModificar.addEventListener('click', () =>{
+
+})
 
 </script>
