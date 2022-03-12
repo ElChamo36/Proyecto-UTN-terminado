@@ -115,7 +115,7 @@ app.post('/formulario', (req, res) => {
                         port: 465,
                         secure: true,
                         auth:{
-                            user: "chamorrolmariano@gmail.com",
+                            user: "cabaniasuiza@gmail.com",
                             pass: process.env.PG
                         }
                     });
