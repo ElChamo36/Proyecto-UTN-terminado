@@ -1,9 +1,10 @@
-require ('dotenv').config();
+require('dotenv').config();
 const express = require('express');
 const app = express();
-const Port = process.env.PORT;
+const Port = process.env.PORT || 8080;
 const path = require('path');
 const hbs = require('hbs');
+const nodemailer = require('nodemailer');
 
 
 //Traemos librería para conexión a la base de datos
@@ -16,7 +17,7 @@ const conexion = mysql.createConnection({
     user: process.env.USER,
     password: process.env.PASSWORD,
     database: process.env.DB,
-    port: 3306
+    port: 3306 
 });
 
 
@@ -105,12 +106,33 @@ app.post('/formulario', (req, res) => {
         conexion.query("insert into cliente (nombre, apellido, fecha_ingreso_consulta, fecha_egreso_consulta, dni, mail, telefono) values (?, ?, ?, ?, ?, ?, ?);", [nombre, apellido,fecha_ingreso_consulta, fecha_egreso_consulta, dni, mail, telefono], (err, result) =>{
             if(err){
                 console.log(err)
-            }else{
+            }else{              
+                async function main() {
+                    
+                    let transporter = nodemailer.createTransport({
+                        host: "smtp.gmail.com",
+                        port: 465,
+                        secure: true,
+                        auth:{
+                            user: "chamorrolmariano@gmail.com",
+                            pass: process.env.PG
+                        }
+                    });
+                    let info = await transporter.sendMail({
+                        from: "chamorrolmariano@gmail.com",
+                        to: mail,
+                        subject: "Nuevo mensaje de contacto",
+                        html:"Gracias por visitar nuestra página, En instantes te respondemos tu consulta."
+                    });
                 console.log("Tu consulta se realizó con éxito")
-                res.render ('index') ;
+                res.render ('enviado', {título: "Mail enviado",
+                nombre, mail}) ;
+                }
+                main().catch(console.err);
             }           
         })
     });
+
 
 
 //Ruta post para que el administrador ingrese una reserva

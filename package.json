@@ -7,13 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "author": "",
+  "author": "Mariano Chamorro",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "hbs": "^4.2.0",
     "mysql2": "^2.3.3",
+    "node": "^12.18.3",
+    "nodemailer": "^6.7.2",
     "nodemon": "^2.0.15",
     "path": "^0.12.7"
   }
