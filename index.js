@@ -9,6 +9,7 @@ const nodemailer = require('nodemailer');
 
 //Traemos librería para conexión a la base de datos
 const mysql = require('mysql2');
+const { url } = require('inspector');
 
 
 //Creamos la configuración de la conexión con la base de datos
@@ -119,13 +120,14 @@ app.post('/formulario', (req, res) => {
                         }
                     });
                     let info = await transporter.sendMail({
-                        from: "chamorrolmariano@gmail.com",
+                        from: "cabaniasuiza@gmail.com",
                         to: mail,
                         subject: "Nuevo mensaje de contacto",
-                        html:"Gracias por visitar nuestra página, En instantes te respondemos tu consulta."
+                        html:`Gracias por visitar nuestra página de CABAÑA SUIZA!!!   
+                            En instantes te respondemos tu consulta.`
                     });
                 console.log("Tu consulta se realizó con éxito")
-                res.render ('enviado', {título: "Mail enviado",
+                res.render ('enviado', {título: "Mail enviado a CABAÑA SUIZA, desde: ",
                 nombre, mail}) ;
                 }
                 main().catch(console.err);
