@@ -7,10 +7,10 @@ const hbs = require('hbs');
 const nodemailer = require('nodemailer');
 
 
+
 //Traemos librería para conexión a la base de datos
 const mysql = require('mysql2');
 const { url } = require('inspector');
-
 
 //Creamos la configuración de la conexión con la base de datos
 const conexion = mysql.createConnection({
@@ -21,7 +21,6 @@ const conexion = mysql.createConnection({
     port: 3306 
 });
 
-
 //Conectamos a la database
 conexion.connect((error) => {
     if (error){
@@ -31,22 +30,18 @@ conexion.connect((error) => {
     }
 });
 
-
-
-
 //Middlewares
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname, 'public')));
-
 
 //Configuramos el Motor de Plantillas
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
-
 //Routes----------------------------------------------------
+
 //GETS para el usuario:
 app.get('/', (req, res) =>{
     res.render('index')
@@ -82,7 +77,6 @@ app.get('/administrador', (req, res) => {
     });
 });
 
-
 app.get('/reservas', (req, res) => {
     conexion.query('SELECT * FROM reservas', (err, reserva) => {
         if(err){
@@ -92,13 +86,6 @@ app.get('/reservas', (req, res) => {
         }
     });
 });
-
-
-
-//Configuramos la ruta post del formulario
-/*Los datos los va a sacar desde los inputs, los cuales tienen que tener como atributo name el 
-nombre de la variable que estoy describiendo en las constantes.
-El method del formulario tiene que ser post*/ 
 
 //Ruta post para usuarios
 app.post('/formulario', (req, res) => {
@@ -195,11 +182,8 @@ app.post('/reservas', (req, res) => {
     })
 });
 
-
-
 //Cierre de la conexión
 // conexion.end();
-
 
 //Configuración del servidor
 app.listen(Port, () =>{
