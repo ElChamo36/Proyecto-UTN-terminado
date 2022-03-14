@@ -785,13 +785,13 @@ footer h2 {
     }
 
     .administrador .consultas table thead th{
-       
+        font-size: medium;
         width: 5%;
         border: 2px solid black;
     }
     
     .administrador .consultas table tbody td{
-       
+        font-size: medium;
         width: 5%;
         overflow: auto;
         border: 2px solid black;
