@@ -356,8 +356,7 @@ footer h2 {
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: repeat (13, auto);
     grid-gap: .8%; 
-    padding: 2% 2%;
-    margin-bottom: 5%;
+    padding: 2% 2% 9% 2%;
     background-image: radial-gradient(gold, rgba(0, 174, 255, 0.747));
 }
 
