@@ -144,11 +144,36 @@ app.post('/formulario', (req, res) => {
             conexion.query("insert into reservas (nombre_reserva, apellido_reserva, dni_reserva, mail_reserva, telefono_reserva, fecha_ingreso_reserva, fecha_egreso_reserva, seña, monto, total_noches) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);", [nombre_reserva, apellido_reserva, dni_reserva, mail_reserva, telefono_reserva, fecha_ingreso_reserva, fecha_egreso_reserva, seña, monto, total_noches], (err, reserva) =>{
                 if(err){
                     console.log(err)
-                }else{
+                }else{              
+                    async function main() {                       
+                        let transporter = nodemailer.createTransport({
+                            host: "smtp.gmail.com",
+                            port: 465,
+                            secure: true,
+                            auth:{
+                                user: "cabaniasuiza@gmail.com",
+                                pass: process.env.PG
+                            }
+                        });
+                        let info = await transporter.sendMail({
+                            from: "cabaniasuiza@gmail.com",
+                            to: mail_reserva,
+                            subject: "Reserva CABAÑA SUIZA",
+                            html:`--CABAÑA SUIZA--  
+                            Tú reserva a nombre de ${nombre_reserva} ${apellido_reserva} se ha realizado con éxito.
+                            Fecha de ingreso: ${fecha_ingreso_reserva}
+                            Fecha de egreso: ${fecha_egreso_reserva}
+                            Seña: ${seña}
+                            Monto total: ${monto}
+                            Noches: ${noches}
+                            Contraseña WiFi: hitecsuiza1333`
+                        });
                     console.log("Tu reserva se realizó con éxito")
-                    res.render("administrador")
-                }           
-            })
+                    res.render ('administrador') ;
+                    }
+                    main().catch(console.err);
+                } 
+            });
         
         });
 
