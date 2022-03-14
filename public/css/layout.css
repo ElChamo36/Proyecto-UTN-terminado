@@ -784,4 +784,15 @@ footer h2 {
         
     }
 
-}
+    .administrador .consultas table thead th{
+       
+        width: 5%;
+        border: 2px solid black;
+    }
+    
+    .administrador .consultas table tbody td{
+       
+        width: 5%;
+        overflow: auto;
+        border: 2px solid black;
+    }
