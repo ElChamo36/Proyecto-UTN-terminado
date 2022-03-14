@@ -161,20 +161,19 @@ app.post('/formulario', (req, res) => {
                             subject: "Reserva CABAÑA SUIZA",
                             html:`--CABAÑA SUIZA--  
                             Tú reserva a nombre de ${nombre_reserva} ${apellido_reserva} se ha realizado con éxito.
-                            Fecha de ingreso: ${fecha_ingreso_reserva}
-                            Fecha de egreso: ${fecha_egreso_reserva}
-                            Seña: ${seña}
-                            Monto total: ${monto}
-                            Noches: ${noches}
-                            Contraseña WiFi: hitecsuiza1333`
+                            Fecha de ingreso: ${fecha_ingreso_reserva}.
+                            Fecha de egreso: ${fecha_egreso_reserva}.
+                            Seña: ${seña}.
+                            Monto total: ${monto}.
+                            Noches: ${total_noches}.
+                            Contraseña WiFi: hitecsuiza1333.`
                         });
                     console.log("Tu reserva se realizó con éxito")
                     res.render ('administrador') ;
                     }
                     main().catch(console.err);
                 } 
-            });
-        
+            });       
         });
 
 //Ruta PUT y DELETE para que el administrador realice un UPDATE y DELETE  
