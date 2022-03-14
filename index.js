@@ -160,12 +160,12 @@ app.post('/formulario', (req, res) => {
                             to: mail_reserva,
                             subject: "Reserva CABAÑA SUIZA",
                             html:`--CABAÑA SUIZA--  
-                            Tú reserva a nombre de ${nombre_reserva} ${apellido_reserva} se ha realizado con éxito.
-                            Fecha de ingreso: ${fecha_ingreso_reserva}.
-                            Fecha de egreso: ${fecha_egreso_reserva}.
-                            Seña: ${seña}.
-                            Monto total: ${monto}.
-                            Noches: ${total_noches}.
+                            Tú reserva a nombre de ${nombre_reserva} ${apellido_reserva} se ha realizado con éxito.${<br></br>}
+                            Fecha de ingreso: ${fecha_ingreso_reserva}.${<br></br>}
+                            Fecha de egreso: ${fecha_egreso_reserva}.${<br></br>}
+                            Seña: ${seña}.${<br></br>}
+                            Monto total: ${monto}.${<br></br>}
+                            Noches: ${total_noches}.${<br></br>}
                             Contraseña WiFi: hitecsuiza1333.`
                         });
                     console.log("Tu reserva se realizó con éxito")
