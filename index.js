@@ -104,7 +104,7 @@ El method del formulario tiene que ser post*/
 app.post('/formulario', (req, res) => {
     const {nombre, apellido, fecha_ingreso_consulta, fecha_egreso_consulta, dni, mail, telefono} = req.body;
     
-        conexion.query("insert into cliente (nombre, apellido, fecha_ingreso_consulta, fecha_egreso_consulta, dni, mail, telefono) values (?, ?, ?, ?, ?, ?, ?);", [nombre, apellido,fecha_ingreso_consulta, fecha_egreso_consulta, dni, mail, telefono], (err, result) =>{
+        conexion.query("insert into cliente (nombre, apellido, fecha_ingreso_consulta, fecha_egreso_consulta, dni, mail, telefono) values (?, ?, ?, ?, ?, ?, ?);", [nombre, apellido, fecha_ingreso_consulta, fecha_egreso_consulta, dni, mail, telefono], (err, result) =>{
             if(err){
                 console.log(err)
             }else{              
