@@ -55,7 +55,8 @@
                 <td>{{fecha_egreso_reserva}}</td>
                 <td>{{seña}}</td>
                 <td>{{monto}}</td>
-                <td>{{total_noches}}</td>        
+                <td>{{total_noches}}</td> 
+                <h2 id="Noches"></h2>       
                 </tr>
                 {{/each}}
             </tbody>
@@ -82,6 +83,12 @@ function login(req, res){
     }
 }   
 login()
+
+function contadorNoches(fecha_egreso_reserva, fecha_ingreso_reserva){
+    totalNoches = fecha_egreso_reserva - fecha_ingreso_reserva;
+    noches = document.getElementById("Noches")
+    Noches.innerHTML = totalNoches
+}
 
 
 </script>

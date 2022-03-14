@@ -3,39 +3,39 @@
 
 <body>
     <div class="administrador">
-    <section class="consultas">
-        <h1>Consultas</h1>
-        <table>
-            <thead>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Fecha de Ingreso</th>
-                <th>Fecha de Egreso</th>
-                <th>DNI</th>
-                <th>Mail</th>
-                <th>Teléfono</th>
-            </thead>
+        <section class="consultas">
+            <h1>Consultas</h1>
+            <table>
+                <thead>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Fecha de Ingreso</th>
+                    <th>Fecha de Egreso</th>
+                    <th>DNI</th>
+                    <th>Mail</th>
+                    <th>Teléfono</th>
+                </thead>
 
-            <tbody>
-                {{#each result}}
-                <tr>
-                <td>{{nombre}}</td>
-                <td>{{apellido}}</td>
-                <td>{{fecha_ingreso_consulta}}</td>
-                <td>{{fecha_egreso_consulta}}</td>
-                <td>{{dni}}</td>
-                <td>{{mail}}</td>
-                <td>{{telefono}}</td>
-                </tr>
-                {{/each}}
-            </tbody>
-        </table>
-    </section>
+                <tbody>
+                    {{#each result}}
+                    <tr>
+                    <td>{{nombre}}</td>
+                    <td>{{apellido}}</td>
+                    <td>{{fecha_ingreso_consulta}}</td>
+                    <td>{{fecha_egreso_consulta}}</td>
+                    <td>{{dni}}</td>
+                    <td>{{mail}}</td>
+                    <td>{{telefono}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </section>
 <br>
-    <section class="consultas">
-        <h1 style="text-align: center;">Armá tu reserva y enviala al cliente</h1>
-        <div class="divreserva">
-            <form action="" method="post">
+        <section class="consultas">
+            <h1 style="text-align: center;">Armá tu reserva y enviala al cliente</h1>
+            <div class="divreserva">
+                <form action="" method="post">
                 <label for="">Nombre</label>
                 <input type="text" name="nombre_reserva" placeholder="">
                 <label for="">Apellido</label>
@@ -60,10 +60,11 @@
                 <input type="number" name="total_noches" placeholder="">
                 <br><br>
                 <input type="submit">
-            </form>
-        </div>                    
-    </section>
-</div>
+                </form>  
+            </div>   
+        </section>
+    </div>
+</body>
 
 <script>
 function login(req, res){
