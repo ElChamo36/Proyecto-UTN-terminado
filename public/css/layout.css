@@ -634,10 +634,14 @@ footer h2 {
 
     .divsection section img{
         width: 85%;
-        margin-bottom: 1%;
-        float: left;
+        margin-right: 6%;
+       
     }
-    
+    .divsection section .img1{
+        margin-bottom: 7%;
+        float: left;
+        
+    }
 
     .divindex section video{
         width: 85%;

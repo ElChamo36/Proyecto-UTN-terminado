@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const Port = process.env.PORT || 8080;
+const Port = process.env.PORT || 3000;
 const path = require('path');
 const hbs = require('hbs');
 const nodemailer = require('nodemailer');
